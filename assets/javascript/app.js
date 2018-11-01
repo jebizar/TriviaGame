@@ -71,6 +71,33 @@ questions = [
     },
 ]
 
+var counter = 15;
+var intervalID;
+$("#timer").html(counter);
+
+function count(){
+    intervalID = setInterval(decrement,1000);
+}
+
+function decrement(){
+    counter--;
+    $("#timer").html(counter);
+    if(counter === -1){
+        end();
+        number++;
+        generateQuiz();
+    }
+}
+
+function end(){
+    clearInterval(intervalID);
+    counter = 15;
+    $("#timer").html(counter);
+    count();
+}
+
+count();
+
 var number = 0;
 
 function generateQuiz() {
