@@ -7,18 +7,30 @@
   <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <div id="timer"></div>
-    <div id="quiz"></div>
-    <button id="submit">Submit</button>
-    <div id="results"></div>
-    <script type="text/javascript" src="./assets/javascript/app.js"></script>
+<body style="background-image: url('./assets/images/pokemon.jpg')">
+  <div class="container">
+    <h1 class="jumbotron text-center" style="background-color:white">Pokemon Trivia Game</h1>
+    <div class="row" id="page" style="color:white">
+      <div class="col-6">
+        <form>
+          <div id="quiz"></div>
+          <button class="btn btn-dark" id="submit">Submit</button>
+        </form>
+      </div>
+      <div class="col-6">
+        <div id="timer" style="font-size:100pt">15</div>
+      </div>
+    </div>
+    <div id="results">
+      <span class="badge badge-primary" id="winCount"></span>
+      <span class="badge badge-warning" id="lossCount"></span>
+    </div>
+  </div>
+  <script type="text/javascript" src="./assets/javascript/app.js"></script>
 </body>
 
 </html>
