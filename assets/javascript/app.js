@@ -185,7 +185,7 @@ function generateQuiz() {
     }
 
     else {
-        repeat = false;
+        clearInterval(intervalID);
         $("#page").empty();
         $("#page").html(
             `<div class="col-5">` +
@@ -216,6 +216,7 @@ function generateQuiz() {
             generateQuiz();
             end();
         });
+        return;
     }
 }
 
